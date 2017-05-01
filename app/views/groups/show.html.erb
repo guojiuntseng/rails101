@@ -9,7 +9,7 @@
 
   <h2><%= @group.title %></h2>
   <p><%= @group.description %></p>
-  
+
     <table class="table">
         <thead>
         <tr>
@@ -28,4 +28,8 @@
         <% end %>
         </tbody>
     </table>
+    
+    <div class="text-center">
+       <%= will_paginate @posts %>
+    </div>
 </div>
