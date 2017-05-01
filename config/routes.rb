@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
+   devise_for :users
    resources :groups do
-    resources :posts
+     member do
+       post :join
+       post :quit
+     end
+
+     resources :posts
    end
    root 'groups#index'
    #root 'welcome#index'
